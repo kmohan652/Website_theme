@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+
+
+<!--
+     All Default Themes
+
+
+    <template id="site_magic3brothers.theme_youngtree" name="Youngtree" inherit_id="website.assets_frontend" active="True" customize_show="False">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/less" href='/site_magic3brothers/static/src/css/default-fix.css' t-ignore="true"/>
+        </xpath>
+    </template> -->
+
+    <template id="homepage_inherit" inherit_id="website.homepage" name="Homepage"  active="True" customize_show="True">
+      <xpath expr="//div[@id='wrap']" position="replace">
+        <div id="wrap" class="oe_structure oe_empty">
+          <div id="carousel-thumbnail-indicators" class="carousel slide" data-ride="carousel" style='text-align: center;'>
+          <!-- Indicators -->
+         <h1>Mohan</h1>
+          </div> 
+        </div>  
+      </xpath>
+    </template> 
+    
+    <template id="footer_inherit" inherit_id="website.layout" name="Footer"  active="True" customize_show="True">
+      <xpath  expr="//div[@id='footer']" position="replace">
+        <div id="footer" class="oe_structure oe_empty">
+          
+        </div>  
+      </xpath>
+      
+    </template> 
+    <template id="theme_gourmand_nav" name="Gourmand Name" inherit_id="website.layout">
+<xpath expr="//div[@id='wrapwrap']/header" position="replace">
+
+    <header id="header" t-att-class=" 'editable_mode' if editable else '' ">
+			<div class="toprow" style="background: #3f723b;height: 20px;">
+				<div class="container text-right" style="padding-top: 5px;">
+					<div class="col-md-12">
+
+        <ul  class="nav navbar-nav pull-right" id="top_menu">
+         <li class="dropdown" t-ignore="true" groups="base.group_user,base.group_portal">
+          <a href="#" class="dropdown-toggle top-nav-bar"  data-toggle="dropdown">
+           <b><span style="color:white !important;"><i class="fa fa-user" aria-hidden="true"></i></span>
+            <span style="color:white !important;" t-esc="user_id.name" />
+		<span class="caret"></span>
+           </b>
+          </a>
+          <ul class="dropdown-menu js_usermenu" role="menu">
+           <li>
+            <a  style="color:#999999 !important;" href="/web" role="menuitem">My Account</a>
+           </li>
+           <li class="divider" />
+           <li>
+            <a style="color:#999999 !important;" t-attf-href="/web/session/logout?redirect=/" role="menuitem">Logout</a>
+           </li>
+          </ul>
+         </li>
+        </ul>
+
+<!--<a href="/shop/cart" style="color:#fff !important;margin-right: 2%;"><i class="fa fa-shopping-cart"></i> Cart<sup class="my_cart_quantity label label-primary"></sup></a>-->
+
+					</div>
+				</div>
+			</div>
+			<div class="container header_nav">
+				<div class="row">
+					<div class="col-md-2">
+						<a href="/" class="navbar-brand"><img src="/theme_farms2fresh/static/src/img/logo.png"/></a>
+					</div>
+					<div class="col-md-10" style="padding-top: 15px;">
+						<ul class="nav navbar-nav pull-right">
+						<li><a href="/">Home</a></li>
+						  <li><a href="/shop">Shop</a></li>
+						  <li><a href="/page/about_us">About</a></li>
+						  <li><a href="/page/contactus">Contact</a></li>	
+						 <li><a href="/support/help">Support</a></li>						  
+						</ul>
+						<div id="search_field" class="pull-right">
+							<!--<form class="navbar-form" role="search">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Search" name="q"/>
+								<div class="input-group-btn">
+									<button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+								</div>
+							</div>
+							</form>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		<hr></hr>
+
+     
+    </header>
+   </xpath>
+  </template>
+
+</data>
+</odoo>
